@@ -1,0 +1,29 @@
+<div>
+    <h1>User List</h1>
+
+
+
+
+    <ul>
+
+        <table>
+            <tr>
+                <th>User Name</th>
+
+            </tr>
+
+            {{#each usersFound}}
+            <tr>
+                <li>
+                    <form id="delete" name="delete" method="POST" action="/users/delete/{{UserId}}">
+                        <td><a href="/users/admin/viewUser/{{UserId}}">{{FirstName}} {{LastName}}</a></td>
+                        <td><button type="submit">Delete</button></td>
+                    </form>
+                </li>
+
+            </tr>
+            {{/each}}
+        </table>
+    </ul>
+
+</div>

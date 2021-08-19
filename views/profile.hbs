@@ -1,0 +1,35 @@
+<div>
+    <h1>{{FirstName}} {{LastName}}</h1>
+    <h2>Username: {{Username}}</h2>
+</div>
+<div>
+    <form id="newPost" name="newPost" method="GET" action="/users/newPost">
+        <button type="submit">New Post</button>
+    </form>
+</div>
+
+<h2>Posts:</h2>
+
+
+
+<ul>
+    <table>
+        <tr>
+            <th>Post Title</th>
+            <th>Post Body</th>
+        </tr>
+
+        {{#each postsFound}}
+        <tr>
+            <li>
+                <form id="deletePost" name="deletePost" method="POST" action="/users/posts/delete/{{PostId}}">
+                    <td><a href="/users/editPost/{{PostId}}">{{PostTitle}}</a></td>
+                    <td>{{PostBody}}</td>
+                    <td><button type="submit">Delete</button></td>
+                </form>
+            </li>
+        </tr>
+        {{/each}}
+    </table>
+
+</ul>

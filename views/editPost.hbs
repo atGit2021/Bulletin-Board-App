@@ -1,0 +1,18 @@
+<div>
+    <h1>Edit post</h1>
+
+    <form id="newPost" name="newPost" method="POST" action="/users/editPost/{{PostId}}">
+        <div>
+            <label for="postTitle">Post Title: </label>
+            <input type="text" name="postTitle" value="{{PostTitle}}" required>
+        </div>
+        <div>
+            <label for="postBody">Post Body: </label>
+            <input type="text" name="postBody" value="{{PostBody}}" required>
+        </div>
+        <div>
+            <button type="submit">Update</button>
+        </div>
+    </form>
+
+</div>
